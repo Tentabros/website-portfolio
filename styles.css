@@ -1,0 +1,467 @@
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --text-color: #efeee8;
+    --background: #2a2825; /* Slightly darker to match image */
+    --accent-light: #c8d4c1;
+    --accent-gray: #929292;
+    --accent-green: #97ab5d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background);
+    overflow-x: hidden;
+}
+
+.hero-section {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 4rem 6rem; /* Increases side spacing */
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-section .text {
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    max-width: 600px;
+    padding-bottom: 20rem;
+    
+}
+
+.hero-section h1 {
+    font-size: 8.5rem;
+    font-weight: 900;
+    line-height: 0.85; /* Tighter line height like the image */
+    text-transform: none;
+    letter-spacing: -3px;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.hero-section .button-selections{
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 1rem;
+}
+
+.hero-section .button-selections .btn-primary, .btn-secondary, .btn-tertiary, .btn-cv {
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
+    width: auto;
+    text-align: center;
+    background-color: var(--background);
+    color: var(--text-color);
+    border: 3.5px solid var(--text-color);
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-section .headshot {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-right: 2rem;
+}
+
+.hero-section .headshot img {
+    height: 100%; /* Scales by height to fill the frame */
+    width: auto;
+    object-fit: contain;
+}
+
+.hero-section .headshot h4 {
+    position: absolute;
+    top: 22.5%;
+    right: 0;
+    left: 10%;
+    transform: translateY(-50%);
+    width: auto;
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1.1;
+    max-width: 350px;
+    color: var(--text-color);
+    text-align: left;
+    margin: 0;
+    padding-right: 2rem;
+}
+
+.folder-shapes {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.oval {
+    position: absolute;
+    border-radius: 100px;
+    bottom: 0;
+}
+
+/* Hero section oblong shapes */
+.hero-section .oval-1 {
+    width: 600px;
+    height: 180px;
+    background-color: #c8d5b9;
+    left: -5%;
+    bottom: -90px;
+}
+
+.hero-section .oval-2 {
+    width: 600px;
+    height: 170px;
+    background-color: #8a8a8a;
+    left: calc(-5% + 180px);
+    bottom: -80px;
+}
+
+.hero-section .oval-3 {
+    width: 600px;
+    height: 170px;
+    background-color: #a8b896;
+    left: calc(-5% + 380px);
+    bottom: -85px;
+}
+
+/*SECTION 2 STYLES*/
+.about-me-section {
+    background-color: var(--accent-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-me .about-me-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 200px;
+}
+
+.about-me-img img {
+    width: 70%;
+    height: auto;
+    margin-top: 90px;
+
+}
+
+.about-me-section .text {
+    flex: 1;
+    color: #302e2b;
+}
+
+.about-me-section h1{
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+    text-align: right;
+    padding-right: 20px;
+
+}
+
+.about-me-section p{
+    font-size: 2rem;
+    text-align: right;
+    padding-right: 40px;
+}
+
+.about-me-img i {
+    position: absolute;
+    font-size: 13rem;
+    color: #2a2825;
+    z-index: 10;
+}
+
+.fa-python { top: 30%; left: 40%; }
+.fa-html5  { top: 15%; left: 28%; }
+.fa-database { bottom: 29%; left: 42%; }
+.fa-hexagon-nodes { bottom: 8%; left: 35%; }
+.fa-java { top: 13%; left: 2%; }
+
+.about-me-section .oval-1{
+    width: 600px;
+    height: 180px;
+    background-color: #99aa66;
+    right: -5%;
+    bottom: -90px;
+}
+
+.about-me-section .oval-2{
+    width: 600px;
+    height: 165px;
+    background-color: #9b9b9b;
+    right: calc(2% + 180px);
+    bottom: -80px;
+}
+
+.about-me-section .oval-3{
+    width: 600px;
+    height: 170px;
+    background-color: #383838;
+    right: calc(2% + 380px);
+    bottom: -85px;
+}
+
+/* SECTION 3 STYLES */
+
+.work-section{
+    background-color: var(--accent-green);
+    padding-bottom: 150px;
+    position: relative;
+    }
+
+.work-section h1{
+    font-size: 5rem;
+    color: var(--text-color);
+    padding: 2rem 5rem;
+}
+
+.work-section .four-projects-grid{
+    display:flex;
+    justify-content: center;
+    padding: 2rem 3.5rem;
+    gap: 2rem;
+}
+
+.card-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Clips the overlay text to the card shape */
+    border-radius: 20%;
+}
+
+.work-section .four-projects-grid .project-card{
+    flex: 1;
+    max-width: 800px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.work-section h2{
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    color: var(--text-color);
+    text-align: center;
+    max-width: 220px;
+}
+
+.work-section .square-card-background{
+    background-color: var(--background);
+    border-radius: 20%;
+    border-color: var(--accent-light);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.work-section .project-card img{
+    width: 280px;
+    height: 280px;
+    border-radius:15%;
+    object-fit: contain;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(42, 40, 37, 0.9); /* Same as background but semi-transparent */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    opacity: 0; /* Hidden by default */
+    z-index: 3; /* Top layer */
+    transition: opacity 0.3s ease;
+    text-align: center;
+}
+
+.overlay p {
+    color: var(--text-color);
+    font-size: 0.9rem !important; /* Forces smaller size for long text */
+    line-height: 1.4;
+}
+
+/* The Magic: Show text on hover */
+.project-card:hover .overlay {
+    opacity: 1;
+}
+
+.project-card:hover img {
+    opacity: 0.2; /* Dims the image when text pops up */
+}
+
+/* work section oblong shapes */
+.work-section .oval-1 {
+    width: 600px;
+    height: 180px;
+    background-color: #2a2825;
+    left: -5%;
+    bottom: -90px;
+}
+
+.work-section .oval-2 {
+    width: 600px;
+    height: 170px;
+    background-color: #8a8a8a;
+    left: calc(-5% + 180px);
+    bottom: -80px;
+}
+
+.work-section .oval-3 {
+    width: 600px;
+    height: 170px;
+    background-color: #a8b896;
+    left: calc(-5% + 380px);
+    bottom: -85px;
+}
+
+/* SECTION 4 STYLES */
+.experience-and-educ-section{
+    color: var(--text-color);
+    flex-wrap: wrap;
+    background-color: var(--background);
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 100px;
+}
+
+.experience-and-educ-section .text{
+    gap: 1rem;
+    text-align: left;
+}
+
+.experience-and-educ-section .text h1{
+    font-size:3.5rem;
+    margin: 2rem 2rem;
+}
+.timeline{
+    margin: 2rem 3.5rem;
+}
+
+.timeline-item{
+    margin-bottom: 1.5rem;
+    text-wrap: wrap;
+}
+
+.experience-and-educ-section .oval-1{
+    width: 600px;
+    height: 180px;
+    background-color: #99aa66;
+    right: -5%;
+    bottom: -90px;
+}
+
+.experience-and-educ-section .oval-2{
+    width: 600px;
+    height: 165px;
+    background-color: #9b9b9b;
+    right: calc(2% + 180px);
+    bottom: -80px;
+}
+
+.experience-and-educ-section .oval-3{
+    width: 600px;
+    height: 170px;
+    background-color: #a8b896;
+    right: calc(2% + 380px);
+    bottom: -85px;
+}
+
+/* SECTION 5 STYLES */
+
+.references-section{
+    background-color: var(--accent-green);
+    padding: 1rem 2rem;
+    position: relative;
+    display: flex;
+}
+
+.references-section .text{
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.references-section .text h1{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.references-section .contacts-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: center;
+}
+
+.references-section .text contact-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.references-section .text contact-item i{
+    font-size: 2.5rem;
+    color: var(--text-color);
+}
+
+.github-contact{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.contact-item h3{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
