@@ -4,7 +4,7 @@ html {
 
 :root {
     --text-color: #efeee8;
-    --background: #2a2825; /* Slightly darker to match image */
+    --background: #2a2825; 
     --accent-light: #c8d4c1;
     --accent-gray: #929292;
     --accent-green: #97ab5d;
@@ -22,12 +22,92 @@ body {
     overflow-x: hidden;
 }
 
+/* NAVIGATION BAR STYLES */
+.navbar {
+    position: fixed;
+    top: -60px; /* Hide muna */
+    left: 0;
+    width: 100%;
+    background-color: rgba(42, 40, 37, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 3rem;
+    z-index: 1000;
+    transition: top 0.3s ease;
+    border-bottom: 2px solid var(--accent-green);
+}
+
+.navbar:hover,
+.navbar.visible {
+    top: 0; /* Slides down when hovered */
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.navbar .btn-primary, 
+.navbar .btn-secondary, 
+.navbar .btn-tertiary, 
+.navbar .btn-cv, 
+.navbar .btn-fourthary {
+    font-size: 0.85rem;
+    padding: 0.6rem 1rem;
+    width: auto;
+    text-align: center;
+    background-color: var(--background);
+    color: var(--text-color);
+    border: 2.5px solid var(--text-color);
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.navbar .btn-primary:hover, 
+.navbar .btn-secondary:hover, 
+.navbar .btn-tertiary:hover, 
+.navbar .btn-cv:hover, 
+.navbar .btn-fourthary:hover {
+    background-color: var(--accent-green);
+    border-color: var(--accent-green);
+}
+
+.nav-clock {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.25rem;
+}
+
+#greeting {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--accent-green);
+}
+
+#live-clock {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    font-family: 'Courier New', monospace;
+}
+
 .hero-section {
     display: flex;
     height: 100vh;
     width: 100%;
     position: relative;
-    padding: 4rem 6rem; /* Increases side spacing */
+    padding: 4rem 6rem; 
     align-items: center;
     overflow: hidden;
 }
@@ -44,7 +124,7 @@ body {
 .hero-section h1 {
     font-size: 8.5rem;
     font-weight: 900;
-    line-height: 0.85; /* Tighter line height like the image */
+    line-height: 0.85; 
     text-transform: none;
     letter-spacing: -3px;
     margin-bottom: 2rem;
@@ -85,7 +165,7 @@ body {
 }
 
 .hero-section .headshot img {
-    height: 100%; /* Scales by height to fill the frame */
+    height: 100%;
     width: auto;
     object-fit: contain;
 }
@@ -258,7 +338,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Clips the overlay text to the card shape */
+    overflow: hidden; 
     border-radius: 20%;
 }
 
@@ -306,30 +386,30 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(42, 40, 37, 0.9); /* Same as background but semi-transparent */
+    background-color: rgba(42, 40, 37, 0.9); 
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 1.5rem;
-    opacity: 0; /* Hidden by default */
-    z-index: 3; /* Top layer */
+    opacity: 0; 
+    z-index: 3; 
     transition: opacity 0.3s ease;
     text-align: center;
 }
 
 .overlay p {
     color: var(--text-color);
-    font-size: 0.9rem !important; /* Forces smaller size for long text */
+    font-size: 0.9rem !important; 
     line-height: 1.4;
 }
 
-/* The Magic: Show text on hover */
+
 .project-card:hover .overlay {
     opacity: 1;
 }
 
 .project-card:hover img {
-    opacity: 0.2; /* Dims the image when text pops up */
+    opacity: 0.2; 
 }
 
 /* work section oblong shapes */
@@ -537,6 +617,3 @@ body {
     width: 80%;
     height: auto;
 }
-
-
-
